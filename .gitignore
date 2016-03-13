@@ -1,0 +1,14 @@
+.DS_Store
+*.pro.user
+*.pro.user.*
+*qrc_qml*
+*qrc_resources*
+*build*
+*MakeFile*
+*moc_*
+*.o
+*.Release
+*.Debug
+*.exe
+*.dll
+*.a

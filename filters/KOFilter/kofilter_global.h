@@ -1,0 +1,12 @@
+#ifndef KOFILTER_GLOBAL_H
+#define KOFILTER_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(KOFILTER_LIBRARY)
+#  define KOFILTERSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define KOFILTERSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // KOFILTER_GLOBAL_H

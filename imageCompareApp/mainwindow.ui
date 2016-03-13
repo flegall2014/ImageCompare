@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Ambiance Compare</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/qml/icons/ico-application.ico</normaloff>:/qml/icons/ico-application.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <widget class="QTreeView" name="treeView">
+      <property name="maximumSize">
+       <size>
+        <width>288</width>
+        <height>16777215</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <property name="tabsClosable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="processingTab">
+        <attribute name="title">
+         <string>Processing</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QQuickWidget" name="processingQmlView">
+             <property name="resizeMode">
+              <enum>QQuickWidget::SizeRootObjectToView</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="quickStatsTab">
+        <attribute name="title">
+         <string>Quick Stats</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QQuickWidget" name="quickStatsQmlView">
+           <property name="resizeMode">
+            <enum>QQuickWidget::SizeRootObjectToView</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="problemsTab">
+        <attribute name="title">
+         <string>Problems</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <widget class="QQuickWidget" name="problemQmlView">
+           <property name="resizeMode">
+            <enum>QQuickWidget::SizeRootObjectToView</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="browseSingleDirectoryAction"/>
+    <addaction name="directoryCompareAction"/>
+    <addaction name="ambianceCompareAction"/>
+    <addaction name="batchProcessingAction"/>
+    <addaction name="pictoCoverageAction"/>
+    <addaction name="openReportAction"/>
+    <addaction name="fileStatsAction"/>
+    <addaction name="exitAction"/>
+   </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <addaction name="preferencesAction"/>
+   </widget>
+   <widget class="QMenu" name="menuWindows">
+    <property name="title">
+     <string>Windows</string>
+    </property>
+    <addaction name="closeAllAction"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuOptions"/>
+   <addaction name="menuWindows"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="selectDir1Action">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/qml/icons/ico-greenfolder.png</normaloff>:/qml/icons/ico-greenfolder.png</iconset>
+   </property>
+   <property name="text">
+    <string>Select Dir1</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+  </action>
+  <action name="exitAction">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/qml/icons/ico-exit.png</normaloff>:/qml/icons/ico-exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+  </action>
+  <action name="selectDir2Action">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/qml/icons/ico-bluefolder.png</normaloff>:/qml/icons/ico-bluefolder.png</iconset>
+   </property>
+   <property name="text">
+    <string>Select Dir2</string>
+   </property>
+  </action>
+  <action name="directoryCompareAction">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/qml/icons/ico-directorycompare.png</normaloff>:/qml/icons/ico-directorycompare.png</iconset>
+   </property>
+   <property name="text">
+    <string>Directory Compare</string>
+   </property>
+  </action>
+  <action name="ambianceCompareAction">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/qml/icons/ico-ambiancecompare.png</normaloff>:/qml/icons/ico-ambiancecompare.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ambiance Compare</string>
+   </property>
+  </action>
+  <action name="preferencesAction">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/qml/icons/ico-preferences.png</normaloff>:/qml/icons/ico-preferences.png</iconset>
+   </property>
+   <property name="text">
+    <string>Preferences</string>
+   </property>
+  </action>
+  <action name="batchProcessingAction">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/qml/icons/ico-batch.png</normaloff>:/qml/icons/ico-batch.png</iconset>
+   </property>
+   <property name="text">
+    <string>Batch Processing</string>
+   </property>
+  </action>
+  <action name="browseSingleDirectoryAction">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/qml/icons/ico-bluefolder.png</normaloff>:/qml/icons/ico-bluefolder.png</iconset>
+   </property>
+   <property name="text">
+    <string>Browse Single Directory</string>
+   </property>
+  </action>
+  <action name="openReportAction">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/qml/icons/ico-report.png</normaloff>:/qml/icons/ico-report.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open Report File</string>
+   </property>
+  </action>
+  <action name="pictoCoverageAction">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/qml/icons/ico-picto-coverage.png</normaloff>:/qml/icons/ico-picto-coverage.png</iconset>
+   </property>
+   <property name="text">
+    <string>Picto Coverage</string>
+   </property>
+  </action>
+  <action name="fileStatsAction">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/qml/icons/ico-stats.png</normaloff>:/qml/icons/ico-stats.png</iconset>
+   </property>
+   <property name="text">
+    <string>File Statistics</string>
+   </property>
+  </action>
+  <action name="closeAllAction">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/qml/icons/ico-closeall.png</normaloff>:/qml/icons/ico-closeall.png</iconset>
+   </property>
+   <property name="text">
+    <string>Close All</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QQuickWidget</class>
+   <extends>QWidget</extends>
+   <header>QtQuickWidgets/QQuickWidget</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

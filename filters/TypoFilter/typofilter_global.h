@@ -1,0 +1,12 @@
+#ifndef TYPOFILTER_GLOBAL_H
+#define TYPOFILTER_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(TYPOFILTER_LIBRARY)
+#  define TYPOFILTERSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define TYPOFILTERSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // TYPOFILTER_GLOBAL_H

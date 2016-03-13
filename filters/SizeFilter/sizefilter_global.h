@@ -1,0 +1,12 @@
+#ifndef SIZEFILTER_GLOBAL_H
+#define SIZEFILTER_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(SIZEFILTER_LIBRARY)
+#  define SIZEFILTERSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define SIZEFILTERSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // SIZEFILTER_GLOBAL_H
