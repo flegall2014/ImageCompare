@@ -22,6 +22,9 @@ public:
     // Run:
     virtual void run();
 
+    // Stop?
+    bool stop;
+
 private:
     // Src dir:
     QDir mSrcDir;

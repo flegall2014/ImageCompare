@@ -6,7 +6,7 @@
 
 // Constructor:
 StringHunter::StringHunter(const QDir &srcDir, const QStringList &filters, const QString &targetString) : mSrcDir(srcDir),
-    mTargetString(targetString), mMinSize(0)
+    mTargetString(targetString), mMinSize(0), stop(false)
 {
     // Auto delete:
     setAutoDelete(true);
@@ -40,6 +40,9 @@ void StringHunter::run()
         // Split:
         for (int i=0; i<mTargetFiles.size(); i++)
         {
+            if (stop)
+                break;
+
             QFile file(mTargetFiles[i]);
             if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
                 continue;
@@ -64,6 +67,9 @@ void StringHunter::run()
         {
             for (int i=0; i<mTargetFiles.size(); i++)
             {
+                if (stop)
+                    break;
+
                 QFile file(mTargetFiles[i]);
                 if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
                     continue;

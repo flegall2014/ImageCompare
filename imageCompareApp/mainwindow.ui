@@ -127,8 +127,8 @@
     <addaction name="closeAllAction"/>
    </widget>
    <addaction name="menuFile"/>
-   <addaction name="menuOptions"/>
    <addaction name="menuWindows"/>
+   <addaction name="menuOptions"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="selectDir1Action">

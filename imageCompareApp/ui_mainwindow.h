@@ -206,8 +206,8 @@ public:
         MainWindow->setStatusBar(statusbar);
 
         menubar->addAction(menuFile->menuAction());
-        menubar->addAction(menuOptions->menuAction());
         menubar->addAction(menuWindows->menuAction());
+        menubar->addAction(menuOptions->menuAction());
         menuFile->addAction(browseSingleDirectoryAction);
         menuFile->addAction(directoryCompareAction);
         menuFile->addAction(ambianceCompareAction);
